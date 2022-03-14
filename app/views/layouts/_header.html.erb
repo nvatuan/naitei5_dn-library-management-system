@@ -1,0 +1,25 @@
+<header class="navbar navbar-fixed-top navbar-light bg-warning">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li>
+        <div class="navbar-header">
+          <%= link_to "LMS", root_path, id: "logo" %>
+        </div>
+      </li>
+      <li class="active"><%= link_to t("global.menu.home"), root_path %></li>
+      <li><%= link_to t("global.menu.about"), about_path %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <%= link_to "#" do %>
+          <span class="glyphicon glyphicon-user"></span> <%= t "global.menu.signup" %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "#" do %>
+          <span class="glyphicon glyphicon-log-in"></span> <%= t "global.menu.login" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</header>

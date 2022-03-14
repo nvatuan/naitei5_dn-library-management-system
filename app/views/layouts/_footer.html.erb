@@ -1,0 +1,17 @@
+<footer class="footer">
+  <small>
+    <%= t ".content_html" %>
+  </small>
+  <nav>
+    <ul>
+      <li> <%= link_to t("global.loc.english"), locale: :en %> </li>
+      <li> <%= link_to t("global.loc.vietnamese"), locale: :vi %> </li>
+    </ul
+  </nav>
+  <nav>
+    <ul>
+      <li><%= link_to t("global.menu.about"), about_path %></li>
+      <li><%= link_to t("global.menu.contact"), contact_path %></li>
+    </ul>
+  </nav>
+</footer>
