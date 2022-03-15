@@ -1,2 +1,8 @@
 emails:
   admin: admin@example.com
+
+defaults:
+  book_cover: default_book.png
+
+pagy:
+  items_per_page: 12

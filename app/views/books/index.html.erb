@@ -1,0 +1,14 @@
+<h1><%= t ".title" %></h1>
+<hr>
+
+<%== pagy_bootstrap_nav(@pagy) %>
+
+<ul class="book-container">
+  <% @books.each_slice(4) do |books_slice| %>
+    <li class="row book-row">
+      <%= render books_slice %>
+    </li>
+  <% end %>
+</ul>
+
+<%== pagy_bootstrap_nav(@pagy) %>

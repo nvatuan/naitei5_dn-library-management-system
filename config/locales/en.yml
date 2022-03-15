@@ -41,3 +41,9 @@ en:
       content_html: >
         Made with Ruby on Rails
         by NVA.Tuan, TX.Phuc
+
+  books:
+    index:
+      title: Library
+    show:
+      not_found: This book cannot be found!

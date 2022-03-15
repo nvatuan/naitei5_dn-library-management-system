@@ -42,3 +42,9 @@ vi:
       content_html: >
         Xây dựng bằng Ruby on Rails
         bởi NVA.Tuan, TX.Phuc
+
+  books:
+    index:
+      title: Thư viện
+    show:
+      not_found: Quyển sách đó không tồn tại!
