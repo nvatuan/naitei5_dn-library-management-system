@@ -1,0 +1,44 @@
+vi:
+  global:
+    title: Hệ thống Quản lý Thư viện
+    menu:
+      home: Trang chủ
+      about: Về chúng tôi
+      contact: Liên lạc
+      login: Đăng nhập
+
+  loc:
+    english: Tiếng Anh
+    vietnamese: Tiếng Việt
+
+  static_pages:
+    home:
+      welcome: Hệ thống Quản lý Thư viện LMS
+      sign_up: Đăng ký Ngay
+      content_html: >
+        Chào mừng đến với Hệ thống Quản lý Thư viện LMS. Đây là nơi hội tụ
+        hàng trăm nghìn những quyển sách từ khắp nơi trên thế giới, nơi bạn
+        có thể tạo yêu cầu đặt sách, theo dõi tác giả hoặc để lại bình luận.
+
+    about:
+      content_html: >
+        Xin chào mừng đến với Hệ thống Quản lý Thư viện LMS. Tại đây, bạn có
+        thể tìm kiếm và xem qua hàng trăm nghìn những quyển sách nổi tiếng trên
+        toàn thế giới, từ mới xuất bản gần đây nhất cho đến khoảng 30 năm trước
+        đây. Bằng việc đăng ký một tài khoản, bạn có thể gửi yêu cầu mượn sách
+        (nếu như chúng có thể được mượn!), bạn cũng có thể theo dõi danh sách
+        những yêu cầu mượn sách này, thêm bình luận nếu cần thiết. Ngoài ra,
+        bạn còn có thể bookmark nhiều tác phẩm, theo dõi tác giả để có thể nhận
+        được thông báo về tác phẩm mới của họ.
+
+        Hãy đăng ký ngay! Trở thành một phần của cộng đồng đọc sách!
+
+    contact:
+      content_html: >
+        Nếu bạn có thêm câu hỏi, hãy vui lòng gửi chúng về cho %{admin_email}.
+
+  layouts:
+    footer:
+      content_html: >
+        Xây dựng bằng Ruby on Rails
+        bởi NVA.Tuan, TX.Phuc

@@ -1,33 +1,43 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  global:
+    title: Library Management System
+    menu:
+      home: Home
+      about: About
+      contact: Contact
+      login: Login
+
+  loc:
+    english: English
+    vietnamese: Vietnamese
+
+  static_pages:
+    home:
+      welcome: Library Management System
+      sign_up: Sign Up
+      content_html: >
+        Welcome to Library Management System. Where you can browse various
+        books from all over the world, make borrow request, follow authors
+        and leaveing comments.
+
+    about:
+      content_html: >
+        Welcome to the Library Management System. Here you can browse many
+        world-famous top selling books, ranging from recently to the even
+        30 years back! By signing up, you have the ability to book request
+        borrowing a certain book (if it is available!), keeping track of
+        your long list of borrow requests, and add comments to it if needed.
+        Other than that, you can also bookmark various work, follow authors
+        to receive notifications about their new writings.
+
+        Be sure to sign up now! Become part of the community!
+
+    contact:
+      content_html: >
+        For more information, please send your inquiries to %{admin_email}.
+
+  layouts:
+    footer:
+      content_html: >
+        Made with Ruby on Rails
+        by NVA.Tuan, TX.Phuc
