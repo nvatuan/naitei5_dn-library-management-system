@@ -1,0 +1,27 @@
+@import 'variables';
+
+ul.book-container {
+  list-style-type: none;
+  padding: 10px 0 15px 0;
+
+  li.book-row {
+    margin-top: 15px;
+
+    .book {
+      img {
+        border: 1px solid $gray;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+      }
+
+      text-align: center;
+
+      .book-title {
+        padding-top: 7px;
+        color: $red;
+      }
+    }
+  }
+
+}

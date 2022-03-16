@@ -1,0 +1,10 @@
+<div class="horizontal-align col-sm-3">
+  <%= link_to book_path(book) do %>
+    <div class="book">
+      <%= image_tag get_book_cover(book), alt: t(".default_book_alt"), class: "book-cover"  %>
+      <div class="book-title">
+        <%= book.title %>
+      </div>
+    </div>
+  <% end %>
+</div>

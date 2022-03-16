@@ -11,4 +11,13 @@ class Book < ApplicationRecord
             dependent: :destroy
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :images, as: :imageable, dependent: :destroy
+
+  enum status: {
+    not_published: 0,
+    not_available: 1,
+    available: 2
+  }, _prefix: true
+
+  scope :published, ->{where.not(status: Book.statuses[:not_published])}
+  scope :ordered_by_date, ->{order(published_date: :desc)}
 end
