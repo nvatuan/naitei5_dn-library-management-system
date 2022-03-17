@@ -3,10 +3,15 @@
     <ul class="nav navbar-nav">
       <li>
         <div class="navbar-header">
-          <%= link_to "LMS", root_path, id: "logo" %>
+          <%= link_to root_path do %>
+            <div id="logo">
+              <span class="glyphicon glyphicon-book"></span>
+              <span>LMS</span>
+            </div>
+          <% end %>
         </div>
       </li>
-      <li class="active"><%= link_to t("global.menu.home"), root_path %></li>
+      <li class="active"><%= link_to t("global.menu.books"), books_path%></li>
       <li><%= link_to t("global.menu.about"), about_path %></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">

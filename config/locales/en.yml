@@ -6,6 +6,7 @@ en:
       about: About
       contact: Contact
       login: Login
+      books: Books
 
   loc:
     english: English
@@ -119,5 +120,13 @@ en:
   books:
     index:
       title: Library
+      books_empty: There are no books.
     show:
       not_found: This book cannot be found!
+      book: Book
+      description: Description
+      publish_date: Publish Date
+      status: Status
+      quantity: Quantity
+      category: Category
+      publisher: Publisher

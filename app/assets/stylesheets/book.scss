@@ -23,5 +23,46 @@ ul.book-container {
       }
     }
   }
+}
 
+
+div.book-details {
+  h2.book-title {
+    text-align: left;
+    font-size: 28px;
+    font-weight: bold;
+
+    color: $black;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  div.book-info {
+    img.book-cover {
+      max-width: 200px;
+      min-width: 50px;
+      margin: 10px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .section-header {
+      border-bottom: 1px dashed $gray;
+      font-size: 20px;
+      font-weight: bold;
+      &::before {
+        content: "• ";
+      }
+    }
+    .section-content {
+      color: $black;
+      font-size: 16px;
+    }
+  }
+
+  a {
+    color: $black;
+    text-decoration: underline;
+  }
 }
