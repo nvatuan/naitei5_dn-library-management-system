@@ -6,6 +6,7 @@ vi:
       about: Về chúng tôi
       contact: Liên lạc
       login: Đăng nhập
+      books: Sách
 
   loc:
     english: Tiếng Anh
@@ -137,5 +138,13 @@ vi:
   books:
     index:
       title: Thư viện
+      books_empty: Không tìm thấy quyển sách nào cả.
     show:
       not_found: Quyển sách đó không tồn tại!
+      book: Bạn đang xem sách
+      description: Mô tả
+      publish_date: Ngày xuất bản
+      status: Trạng thái
+      quantity: Số lượng
+      category: Thể loại
+      publisher: Nhà xuất bản

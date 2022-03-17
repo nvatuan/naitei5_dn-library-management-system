@@ -1,16 +1,43 @@
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <ul>
-          <li>
-            Title: <%= @book.title %>
-          </li>
-          <li>
-            Description: <%= @book.description %>
-          </li>
-        </ul>
-      </h1>
-    </section>
-  </aside>
+<div class="book-details">
+  <h1><%= t ".book" %></h1>
+  <hr>
+
+  <div class="row book-info">
+    <h2 class="book-title "><%= @book.title %></h2>
+    <div class="col-xs-3">
+      <%= image_tag get_book_cover(@book), alt: t(".default_book_alt"), class: "book-cover" %>
+    </div>
+
+    <div class="col-xs-9">
+      <p class="section-header"><%= t ".description" %></p>
+      <p class="section-content">
+        <%= @book.description %>
+      </p>
+
+      <p class="section-header"><%= t ".publish_date" %></p>
+      <p class="section-content">
+        <%= @book.published_date %>
+      </p>
+
+      <p class="section-header"><%= t ".status" %></p>
+      <p class="section-content">
+        <%= @book.status.capitalize %>
+      </p>
+
+      <p class="section-header"><%= t ".quantity" %></p>
+      <p class="section-content">
+        <%= @book.quantity %>
+      </p>
+
+      <p class="section-header"><%= t ".category" %></p>
+      <p class="section-content">
+        <%= link_to @book.category.name, "#" %>
+      </p>
+
+      <p class="section-header"><%= t ".publisher" %></p>
+      <p class="section-content">
+        <%= link_to @book.publisher.name, "#" %>
+      </p>
+    </div>
+  </div>
 </div>
