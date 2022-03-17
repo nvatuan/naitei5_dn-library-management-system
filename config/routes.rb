@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     resources :books, only: %i(index show)
+    resources :borrow_requests, only: %i(index show)
 
     root "static_pages#home"
     get "/home", to: "static_pages#home"

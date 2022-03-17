@@ -1,0 +1,27 @@
+<h1><%= t ".title" %></h1>
+<hr>
+
+<% if @borrow_reqs.blank? %>
+  <p class="center bg-warning"><%= t ".breq_empty" %></p>
+<% else %>
+  <%== pagy_bootstrap_nav(@pagy) %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 10%"><%= t ".user" %></th>
+        <th scope="col" style="width: 25%"><%= t ".book" %></th>
+        <th scope="col"><%= t ".status" %></th>
+        <th scope="col"><%= t ".borrow_date" %></th>
+        <th scope="col"><%= t ".return_date" %></th>
+        <th scope="col"><%= t ".actual_return_date" %></th>
+        <th scope="col"><%= t ".action" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @borrow_reqs %>
+    </tbody>
+  </table>
+
+  <%== pagy_bootstrap_nav(@pagy) %>
+<% end %>

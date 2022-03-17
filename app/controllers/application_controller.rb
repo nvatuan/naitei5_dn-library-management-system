@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
-  include Pagy::Backend
-
   before_action :set_locale
+
+  include Pagy::Backend
+  include SessionsHelper
 
   private
   def set_locale
