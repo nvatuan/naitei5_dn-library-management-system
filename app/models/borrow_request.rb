@@ -1,4 +1,10 @@
 class BorrowRequest < ApplicationRecord
+  UNACTIVE_STATUS = %w(rejected cancelled).freeze
+
+  validates :borrowed_date, presence: true, allow_blank: false
+  validates :return_date, presence: true, allow_blank: false
+  validate :invalid_date_input?
+
   belongs_to :user
   belongs_to :book
   has_many :comments, as: :commentable, dependent: :destroy
@@ -32,4 +38,15 @@ class BorrowRequest < ApplicationRecord
   scope :ordered_by_return_date, ->{order :return_date}
 
   scope :ordered_by, ->(sort_kw){send("ordered_by_#{sort_kw}")}
+  scope :active_status, ->{where.not status: UNACTIVE_STATUS}
+
+  private
+
+  def invalid_date_input?
+    return if [return_date.blank?, borrowed_date.blank?].any?
+
+    return if  return_date > borrowed_date
+
+    errors.add(:return_date, I18n.t("global.error.invalid_return_date"))
+  end
 end
