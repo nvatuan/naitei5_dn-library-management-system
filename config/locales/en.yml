@@ -9,6 +9,7 @@ en:
       books: Books
     error:
       need_log_in: Please log in before viewing this page.
+      no_permission: No permission error
 
   loc:
     english: English
@@ -149,6 +150,7 @@ en:
     index:
       title: Borrow Requests
       breq_empty: There are no borrow requests.
+      need_log_in: Please log in before viewing this page.
       user: User
       book: Book
       status: Status
@@ -156,3 +158,13 @@ en:
       return_date: Return Date
       actual_return_date: Actual Return Date
       action: Action
+    show:
+      title: Borrow Request Details
+      book_title: Book Title
+      borrow_date: Borrow Date
+      return_date: Return Date
+      actual_return_date: Actual Return Date
+      not_yet: Not yet
+      cancel: Cancel
+      comment: Comment
+      borrower: Borrower

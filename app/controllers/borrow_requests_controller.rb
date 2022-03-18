@@ -6,7 +6,14 @@ class BorrowRequestsController < ApplicationController
                                             .ordered_by_status
   end
 
-  def show; end
+  def show
+    @borrow_req = @current_user.borrow_requests.find_by id: params[:id]
+    return if @borrow_req
+
+    store_location
+    flash[:danger] = t "global.error.no_permission"
+    redirect_to home_path
+  end
 
   private
 
