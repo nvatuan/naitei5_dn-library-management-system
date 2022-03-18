@@ -1,0 +1,11 @@
+<div class="center jumbotron">
+  <h1><%= t ".welcome" %></h1>
+
+  <ul class="admin home-subcontainer">
+    <li><%= t "admin.menu.users" %></li>
+    <li><%= t "admin.menu.books" %></li>
+    <li><%= link_to t("admin.menu.borrow_requests"), admin_borrow_requests_path %></li>
+    <li><%= t "admin.menu.authors" %></li>
+    <li><%= t "admin.menu.publishers" %></li>
+  </ul>
+</div>

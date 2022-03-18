@@ -1,9 +1,10 @@
 <tr>
   <td><%= handle_data_date borrow_request.created_at %></td>
+  <td class="link shrink-text"><%= link_to borrow_request.user.name, borrow_request.user %></td>
   <td class="link shrink-text"><%= link_to borrow_request.book.title, borrow_request.book %></td>
   <td><%= t ".#{borrow_request.status}" %></td>
 
   <%= render partial: "td_date", object: borrow_request %>
 
-  <td class="link"><%= link_to t(".detail"), borrow_request %></td>
+  <td class="link"><%= link_to t(".detail"), "#" %></td>
 </tr>

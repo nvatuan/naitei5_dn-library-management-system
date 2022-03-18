@@ -1,30 +1,40 @@
-<header class="navbar navbar-fixed-top navbar-light bg-warning">
+<header class="navbar navbar-fixed-top navbar-light bg-danger">
   <div class="container">
     <ul class="nav navbar-nav">
       <li>
         <div class="navbar-header">
-          <%= link_to root_path do %>
+          <%= link_to admin_root_url do %>
             <div id="logo">
               <span class="glyphicon glyphicon-book"></span>
-              <span>LMS</span>
+              <span class="glyphicon glyphicon-flag"></span>
+              <span><%= t ".lms_admin" %></span>
             </div>
           <% end %>
         </div>
       </li>
-      <li class="active"><%= link_to t("global.menu.books"), books_path%></li>
-      <li><%= link_to t("global.menu.about"), about_path %></li>
+      <li class="active">
+        <%= link_to root_url do%>
+          <%= t ".back_to" %>
+          <span class="glyphicon glyphicon-book"></span>
+          <span><%= t ".lms" %></span>
+        <% end %>
+      </li>
+
+      <li><%= link_to t("admin.menu.users"), "#" %></li>
+      <li><%= link_to t("admin.menu.books"), "#" %></li>
+      <li><%= link_to t("admin.menu.borrow_requests"), admin_borrow_requests_path %></li>
+      <li><%= link_to t("admin.menu.authors"), "#" %></li>
+      <li><%= link_to t("admin.menu.publishers"), "#" %></li>
+
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <%= t(".account") %>
+          <%= link_to "#", {class: "dropdown-toggle", data: {toggle: :dropdown}} do %>
+            <%= t dropdown_title %>
             <b class="caret"></b>
-          </a>
+          <% end %>
           <ul class="dropdown-menu">
-            <% if is_admin? %>
-              <li class="bg-danger"><%= link_to t(".admin_page"), admin_root_url %></li>
-            <% end %>
             <li><%= link_to t(".profile"), current_user %></li>
             <li><%= link_to t(".borrow_requests"), borrow_requests_path %></li>
             <li class="divider"></li>

@@ -3,6 +3,11 @@ Rails.application.routes.draw do
     resources :books, only: %i(index show)
     resources :borrow_requests, only: %i(index show)
 
+    namespace :admin do
+      root "static_pages#home"
+      resources :borrow_requests, only: %i(index show edit)
+    end
+
     root "static_pages#home"
     get "/home", to: "static_pages#home"
     get "/about", to: "static_pages#about"
