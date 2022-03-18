@@ -9,6 +9,7 @@ vi:
       books: Sách
     error:
       need_log_in: Xin vui lòng đăng nhập trước khi xem trang này
+      no_permission: Bạn không có quyền truy cập tài nguyên này
 
   loc:
     english: Tiếng Anh
@@ -167,6 +168,7 @@ vi:
     index:
       title: Yêu cầu mượn sách
       breq_empty: Không tồn tại yêu cầu mượn sách.
+      need_log_in: Xin vui lòng đăng nhập trước khi xem trang này
       user: Người dùng
       book: Sách
       status: Trạng thái
@@ -174,3 +176,13 @@ vi:
       return_date: Ngày trả
       actual_return_date: Ngày trả thực tế
       action: Hành động
+    show:
+      title: Chi tiết yêu cầu mượn sách
+      book_title: Tên sách
+      borrow_date: Ngày mượn
+      return_date: Ngày trả
+      actual_return_date: Ngày trả thực tế
+      not_yet: Chưa trả
+      cancel: Hủy
+      comment: Bình luận
+      borrower: Người mượn

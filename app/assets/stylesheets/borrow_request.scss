@@ -11,3 +11,79 @@ table {
     text-decoration: underline;
   }
 }
+
+.br-comment {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.book-cover {
+  border: 1px solid $gray;
+  border-radius: 4px;
+  padding: 5px;
+  width: 170px;
+}
+
+.label {
+  color: $blue !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+.content {
+  color: $black !important;
+  font-size: 22px !important;
+}
+
+.row {
+  margin: 4px 0;
+}
+
+.br-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+}
+
+
+.btn {
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+.status {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  padding: 6px 0;
+  border-radius: 12px;
+  width: 170px;
+  color: $white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.pending {
+  background-color: $pending-color;
+}
+
+.ready {
+  background-color: $ready-color;
+}
+
+.borrowed {
+  background-color: $borrowed-color;
+}
+
+.returned {
+  background-color: $returned-color;
+}
+
+.rejected {
+  background-color: $rejected-color;
+}
+
+.cancelled {
+  background-color: $cancelled-color;
+}

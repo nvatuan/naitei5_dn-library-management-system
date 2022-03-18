@@ -1,0 +1,56 @@
+<h1><%= t ".title" %></h1>
+<hr>
+
+<div class="br-container">
+  <div class="row">
+    <div class="col-lg-2 col-md-12 center">
+      <%= image_tag get_book_cover(@book), alt: t(".default_book_alt"), class: "book-cover" %>
+    </div>
+    <div class="col-lg-10 col-md-12">
+      <div class="row">
+        <span class="label"> <%= t ".borrower" %>: </span>
+        <span class="content">
+          <%= @borrow_req.user_name %>
+        </span>
+      </div>
+      <div class="row">
+        <span class="label"> <%= t ".book_title" %>: </span>
+        <span class="content">
+          <%= @borrow_req.book_title %>
+        </span>
+      </div>
+      <div class="row">
+        <span class="label"> <%= t ".borrow_date" %>: </span>
+        <span class="content">
+          <%= l(@borrow_req.borrowed_date, format: :long) %>
+        </span>
+      </div>
+      <div class="row">
+        <span class="label">  <%= t ".return_date" %>:  </span>
+        <span class="content">
+          <%= l(@borrow_req.return_date, format: :long)%>
+        </span>
+      </div>
+      <div class="row">
+        <span class="label">  <%= t ".actual_return_date" %>: </span>
+        <span class="content">
+          <%= handle_data_date @borrow_req.actual_return_date %>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+        <span class="status <%= @borrow_req.status %>"> <%= @borrow_req.status %> </span>
+    </div>
+    <div class="col-xs-6 text-right">
+      <button type="button" class="btn btn-danger" <%= @borrow_req.status_pending? ? "" : "disabled" %> >
+        <%= t ".cancel"%>
+      </button>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h2 class="br-comment text-left"><%= t ".comment"%>: </h2>

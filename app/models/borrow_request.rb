@@ -3,6 +3,9 @@ class BorrowRequest < ApplicationRecord
   belongs_to :book
   has_many :comments, as: :commentable, dependent: :destroy
 
+  delegate :name, to: :user, prefix: true
+  delegate :title, to: :book, prefix: true
+
   enum status: {
     pending: 0,
     ready: 1,
