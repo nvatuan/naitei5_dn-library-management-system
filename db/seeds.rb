@@ -57,3 +57,67 @@ Book.create(
   published_date: Date.today,
   status: 1,
 )
+
+books = Book.all
+
+# Create Users
+User.create(
+  name: "admin",
+  email: "admin@example.com",
+  birthday: Faker::Date.between(from: "2004-01-01", to: "1995-01-01"),
+  role: 1,
+  activated: true,
+  activated_at: Time.zone.now,
+  password: "password123",
+  password_confirmation: "password123",
+)
+tester = User.create(
+  name: "tester",
+  email: "tester@example.com",
+  birthday: Faker::Date.between(from: "2004-01-01", to: "1995-01-01"),
+  role: 0,
+  activated: true,
+  activated_at: Time.zone.now,
+  password: "password123",
+  password_confirmation: "password123",
+)
+
+15.times {
+  User.create(
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    birthday: Faker::Date.between(from: "2004-01-01", to: "1995-01-01"),
+    address: Faker::Address.full_address,
+    phone: Faker::PhoneNumber.cell_phone,
+    role: 0,
+    activated: true,
+    activated_at: Time.zone.now,
+    password: "password123",
+    password_confirmation: "password123",
+  )
+}
+
+non_admins = User.where role: User.roles["user"]
+
+# Create BorrowRequest
+## Tester
+10.times {
+  BorrowRequest.create(
+    borrowed_date: Faker::Date.backward(days: 99),
+    return_date: Faker::Date.between(from: 10.days.before, to: 10.days.after),
+    status: rand(0..5),
+    user_id: tester.id,
+    book_id: books.sample.id,
+  )
+}
+
+## Random
+51.times {
+  BorrowRequest.create(
+    borrowed_date: Faker::Date.backward(days: 99),
+    return_date: Faker::Date.between(from: 10.days.before, to: 10.days.after),
+    status: rand(0..5),
+    user_id: non_admins.sample.id,
+    book_id: books.sample.id,
+  )
+}

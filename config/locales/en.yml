@@ -7,6 +7,8 @@ en:
       contact: Contact
       login: Login
       books: Books
+    error:
+      need_log_in: Please log in before viewing this page.
 
   loc:
     english: English
@@ -38,6 +40,8 @@ en:
         For more information, please send your inquiries to %{admin_email}.
 
   layouts:
+    header:
+      borrow_requests: Borrow Requests
     footer:
       content_html: >
         Made with Ruby on Rails
@@ -130,3 +134,25 @@ en:
       quantity: Quantity
       category: Category
       publisher: Publisher
+
+  borrow_requests:
+    borrow_request:
+      detail: Detail
+      n_a: N/A
+      not_yet: Not yet
+      pending: Pending
+      ready: Ready
+      borrowed: Borrowed
+      returned: Returned
+      rejected: Rejected
+      cancelled: Cancelled
+    index:
+      title: Borrow Requests
+      breq_empty: There are no borrow requests.
+      user: User
+      book: Book
+      status: Status
+      borrow_date: Borrow Date
+      return_date: Return Date
+      actual_return_date: Actual Return Date
+      action: Action

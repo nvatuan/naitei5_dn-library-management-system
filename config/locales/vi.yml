@@ -7,6 +7,8 @@ vi:
       contact: Liên lạc
       login: Đăng nhập
       books: Sách
+    error:
+      need_log_in: Xin vui lòng đăng nhập trước khi xem trang này
 
   loc:
     english: Tiếng Anh
@@ -39,6 +41,8 @@ vi:
         Nếu bạn có thêm câu hỏi, hãy vui lòng gửi chúng về cho %{admin_email}.
 
   layouts:
+    header:
+      borrow_requests: Yêu cầu mượn sách
     footer:
       content_html: >
         Xây dựng bằng Ruby on Rails
@@ -148,3 +152,25 @@ vi:
       quantity: Số lượng
       category: Thể loại
       publisher: Nhà xuất bản
+
+  borrow_requests:
+    borrow_request:
+      detail: Chi tiết
+      n_a: Không có
+      not_yet: Chưa trả
+      pending: Đang xử lý
+      ready: Sẵn sàng mượn
+      borrowed: Đã mượn
+      returned: Đã trả
+      rejected: Bị từ chối
+      cancelled: Đã hủy
+    index:
+      title: Yêu cầu mượn sách
+      breq_empty: Không tồn tại yêu cầu mượn sách.
+      user: Người dùng
+      book: Sách
+      status: Trạng thái
+      borrow_date: Ngày mượn
+      return_date: Ngày trả
+      actual_return_date: Ngày trả thực tế
+      action: Hành động

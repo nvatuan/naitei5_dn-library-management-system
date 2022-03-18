@@ -18,12 +18,12 @@
       <% if logged_in? %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <%= t ".account" %>
+            <%= current_user.role_admin? ? t(".admin") : t(".account") %>
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to t(".profile"), current_user %></li>
-            <li><%= link_to t(".setting"), "#" %></li>
+            <li><%= link_to t(".borrow_requests"), borrow_requests_path %></li>
             <li class="divider"></li>
             <li>
               <%= link_to t(".log_out"), logout_path, method: :delete %>

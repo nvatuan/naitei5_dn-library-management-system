@@ -11,4 +11,10 @@ class BorrowRequest < ApplicationRecord
     rejected: 4,
     cancelled: 5
   }, _prefix: true
+
+  scope :by_user, ->(user_id){where(user_id: user_id)}
+  scope :by_book, ->(book_id){where(book_id: book_id)}
+  scope :ordered_by_status, ->{order :status}
+  scope :ordered_by_borrowed_date, ->{order :borrowed_date}
+  scope :ordered_by_return_date, ->{order :return_date}
 end

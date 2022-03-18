@@ -1,0 +1,9 @@
+<tr>
+  <td class="link shrink-text"><%= link_to borrow_request.user.name, borrow_request.user %></td>
+  <td class="link shrink-text"><%= link_to borrow_request.book.title, borrow_request.book %></td>
+  <td><%= t ".#{borrow_request.status}"  %></td>
+  <td><%= borrow_request.borrowed_date.nil? ? t(".n_a") : l(borrow_request.borrowed_date, format: :long) %></td>
+  <td><%= borrow_request.return_date.nil? ? t(".n_a") : l(borrow_request.return_date, format: :long) %></td>
+  <td><%= borrow_request.actual_return_date.nil? ? t(".not_yet") : l(borrow_request.actual_return_date, format: :long) %></td>
+  <td class="link"><%= link_to t(".detail"), "#" %></td>
+</tr>

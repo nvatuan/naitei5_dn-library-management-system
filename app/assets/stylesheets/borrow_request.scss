@@ -1,0 +1,13 @@
+@import 'variables';
+
+table {
+  table-layout: fixed;
+  td.shrink-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  td.link {
+    text-decoration: underline;
+  }
+}
