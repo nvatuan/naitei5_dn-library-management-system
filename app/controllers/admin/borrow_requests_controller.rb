@@ -1,5 +1,6 @@
 class Admin::BorrowRequestsController < Admin::AdminController
-  before_action :check_admin_logged_in, only: %i(index show edit)
+  before_action :check_admin_logged_in, only: %i(index show update)
+  before_action :load_borrow_request, only: %i(show update)
 
   def index
     keyword, sort_kw = params.values_at :keyword, :sort_by
@@ -30,5 +31,28 @@ class Admin::BorrowRequestsController < Admin::AdminController
 
   def show; end
 
-  def edit; end
+  def update
+    status = params[:borrow_request][:status]
+    unless BorrowRequest.statuses.keys.include? status
+      flash.now[:danger] = t ".invalid_params"
+      return render :show
+    end
+
+    if @borrow_req.update_attribute :status, status
+      flash.now[:info] = t ".update_succeeded"
+    else
+      flash.now[:danger] = t ".update_failed"
+    end
+    render :show
+  end
+
+  private
+
+  def load_borrow_request
+    @borrow_req = BorrowRequest.find_by id: params[:id]
+    return if @borrow_req
+
+    flash[:danger] = t ".not_found"
+    redirect_to admin_root_path
+  end
 end

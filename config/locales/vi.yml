@@ -262,3 +262,12 @@ vi:
         return_date: Ngày trả
         actual_return_date: Ngày trả thực tế
         action: Hành động
+      show:
+        title: Admin - Xem chi tiết Yêu cầu mượn
+        submit: Lưu
+        save_confirm: Bạn có chắc muốn lưu chỉnh sửa yêu cầu này?
+        not_found: Không thể tìm thấy yêu cầu mượn đó
+      update:
+        update_succeeded: Cập nhập thành công!
+        update_failed: Cập nhập thất bại, xin hãy thử lại.
+        invalid_params: Tham số không hợp lệ, xin hãy thử lại.

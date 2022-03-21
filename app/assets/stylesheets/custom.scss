@@ -185,6 +185,14 @@ input {
   }
 }
 
+.admin-select {
+  background-color: $white;
+  background-image: none;
+  border: 1px solid $gray;
+  border-radius: 7px;
+  padding-left: 4px;
+}
+
 #session_remember_me {
   width: auto;
   margin-left: 0;

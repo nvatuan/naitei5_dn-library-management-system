@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
     namespace :admin do
       root "static_pages#home"
-      resources :borrow_requests, only: %i(index show edit)
+      resources :borrow_requests, only: %i(index show edit update)
     end
 
     root "static_pages#home"
@@ -25,7 +25,6 @@ Rails.application.routes.draw do
                                         via: :post
 
     resources :users
-
     resources :users do
       resources :borrow_requests
     end

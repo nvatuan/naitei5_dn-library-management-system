@@ -238,3 +238,12 @@ en:
         return_date: Return Date
         actual_return_date: Actual Return Date
         action: Action
+      show:
+        title: Admin - Borrow Request Details
+        submit: Save
+        save_confirm: Are you sure?
+        not_found: Borrow qequest could not be found.
+      update:
+        update_succeeded: Update succeeded!
+        update_failed: Update succeeded!
+        invalid_params: Invalid parameters, please check again!
