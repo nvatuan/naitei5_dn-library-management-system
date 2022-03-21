@@ -81,7 +81,7 @@ yarn-debug.log*
 .framgia-ci-result.temp.yml
 
 # Ignore application configuration
-/config/database.yml
+# /config/database.yml
 /config/master.key
 /config/application.yml
 /config/settings.local.yml
@@ -93,3 +93,6 @@ yarn-debug.log*
 /.idea/
 /spec/
 /test/
+
+# Ignore application configuration
+/config/application.yml
