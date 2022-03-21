@@ -7,15 +7,16 @@
   <%== pagy_bootstrap_nav(@pagy) %>
 
   <table class="table">
-    <thead>
+    <thead class="thead-dark">
       <tr>
         <th scope="col"><%= t ".created_at" %></th>
+        <th scope="col" class="col-md-2"><%= t ".user" %></th>
         <th scope="col" class="col-md-3"><%= t ".book" %></th>
         <th scope="col"><%= t ".status" %></th>
         <th scope="col"><%= t ".borrow_date" %></th>
         <th scope="col"><%= t ".return_date" %></th>
         <th scope="col"><%= t ".actual_return_date" %></th>
-        <th scope="col"><%= t ".action" %></th>
+        <th scope="col" class="col-md-1"><%= t ".action" %></th>
       </tr>
     </thead>
     <tbody>

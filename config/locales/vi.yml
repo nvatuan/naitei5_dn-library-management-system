@@ -7,9 +7,11 @@ vi:
       contact: Liên lạc
       login: Đăng nhập
       books: Sách
+      signup: Đăng ký
     error:
       need_log_in: Xin vui lòng đăng nhập trước khi xem trang này
-      no_permission: Bạn không có quyền truy cập tài nguyên này
+      no_permission: Bạn không có quyền truy cập tài nguyên này.
+      unauthorized: Bạn không được cấp quyền.
 
   loc:
     english: Tiếng Anh
@@ -42,7 +44,12 @@ vi:
         Nếu bạn có thêm câu hỏi, hãy vui lòng gửi chúng về cho %{admin_email}.
 
   layouts:
+    admin_header:
+      back_to: Trở về
+      lms: LMS
+      lms_admin: LMS Admin
     header:
+      admin_page: Trang Admin
       borrow_requests: Yêu cầu mượn sách
     footer:
       content_html: >
@@ -155,6 +162,9 @@ vi:
       publisher: Nhà xuất bản
 
   borrow_requests:
+    td_date:
+      n_a: Không có
+      not_yet: Chưa trả
     borrow_request:
       detail: Chi tiết
       n_a: Không có
@@ -186,3 +196,39 @@ vi:
       cancel: Hủy
       comment: Bình luận
       borrower: Người mượn
+
+  admin:
+    menu:
+      users: Người dùng
+      books: Sách
+      borrow_requests: Yêu cầu mượn
+      authors: Tác giả
+      publishers: Nhà phát hành
+
+    static_pages:
+      home:
+        welcome: Chào mừng đến trang Quản lý LMS.
+
+    borrow_requests:
+      td_date:
+        n_a: Không có
+        not_yet: Chưa trả
+      borrow_request:
+        detail: Chi tiết
+        pending: Đang xử lý
+        ready: Sẵn sàng mượn
+        borrowed: Đã mượn
+        returned: Đã trả
+        rejected: Bị từ chối
+        cancelled: Đã hủy
+      index:
+        title: Yêu cầu mượn sách
+        breq_empty: Không tồn tại yêu cầu mượn sách.
+        created_at: Được tạo lúc
+        user: Người dùng
+        book: Sách
+        status: Trạng thái
+        borrow_date: Ngày mượn
+        return_date: Ngày trả
+        actual_return_date: Ngày trả thực tế
+        action: Hành động

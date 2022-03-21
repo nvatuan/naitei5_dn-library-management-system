@@ -7,9 +7,11 @@ en:
       contact: Contact
       login: Login
       books: Books
+      signup: Sign Up
     error:
       need_log_in: Please log in before viewing this page.
       no_permission: No permission error
+      unauthorized: You don't have permission.
 
   loc:
     english: English
@@ -41,7 +43,12 @@ en:
         For more information, please send your inquiries to %{admin_email}.
 
   layouts:
+    admin_header:
+      back_to: Back to
+      lms: LMS
+      lms_admin: LMS Admin
     header:
+      admin_page: Admin Page
       borrow_requests: Borrow Requests
     footer:
       content_html: >
@@ -137,10 +144,11 @@ en:
       publisher: Publisher
 
   borrow_requests:
-    borrow_request:
-      detail: Detail
+    td_date:
       n_a: N/A
       not_yet: Not yet
+    borrow_request:
+      detail: Detail
       pending: Pending
       ready: Ready
       borrowed: Borrowed
@@ -168,3 +176,38 @@ en:
       cancel: Cancel
       comment: Comment
       borrower: Borrower
+
+  admin:
+    menu:
+      users: Users
+      books: Books
+      borrow_requests: Borrow Requests
+      authors: Authors
+      publishers: Publishers
+
+    static_pages:
+      home:
+        welcome: Welcome to LMS Admin Page.
+
+    borrow_requests:
+      borrow_request:
+        n_a: N/A
+        not_yet: Not yet
+        detail: Detail
+        pending: Pending
+        ready: Ready
+        borrowed: Borrowed
+        returned: Returned
+        rejected: Rejected
+        cancelled: Cancelled
+      index:
+        title: Borrow Requests
+        breq_empty: There are no borrow requests.
+        created_at: Created At
+        user: User
+        book: Book
+        status: Status
+        borrow_date: Borrow Date
+        return_date: Return Date
+        actual_return_date: Actual Return Date
+        action: Action

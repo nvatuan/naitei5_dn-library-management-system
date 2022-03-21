@@ -10,10 +10,6 @@
 }
 
 /* Universal */
-* {
-  color: $blue;
-}
-
 body {
   padding-top: 60px;
 }
@@ -74,6 +70,10 @@ aside {
 }
 
 /* Typography */
+h1, h2, h3, h4, h5, h6, p, td{
+  color: $blue;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
@@ -202,4 +202,12 @@ input {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* Admin */
+.admin {
+  &.home-subcontainer {
+    text-align: left;
+    font-size: x-large;
+  }
 }
