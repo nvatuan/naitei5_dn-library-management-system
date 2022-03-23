@@ -91,5 +91,5 @@ yarn-debug.log*
 
 /.browserslistrc
 /.idea/
-/spec/
+# /spec/
 /test/
